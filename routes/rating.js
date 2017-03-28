@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var ratingController = require('../controllers/ratingController');
-var common = require('../common');
 
 
 //Routes for /ratings, calls the proper controller depending on the path

@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var recipeController = require('../controllers/recipeController');
-var common = require('../common');
 
 //Routes for /recipes, calls the proper controller depending on the path
 

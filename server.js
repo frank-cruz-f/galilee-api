@@ -49,7 +49,8 @@ app.use('/categories', categoryApi);
 app.use('/recipes', recipeApi);
 
 //Starting the app.
-app.listen(3000, function () {
+app.set('port', process.env.PORT || 9080);
+app.listen(app.get('port'), function () {
   //console.log("server started");
 });
 
