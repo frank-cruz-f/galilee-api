@@ -10,8 +10,8 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
-var bunyan = require('bunyan');
-log = bunyan.createLogger({name: 'cookbook', streams:[{level:'info', path: './logs/errors.log'}]});
+/*var bunyan = require('bunyan');
+log = bunyan.createLogger({name: 'cookbook', streams:[{level:'info', path: './logs/errors.log'}]});*/
 
 // parse application/json
 app.use(bodyParser.json())
@@ -34,14 +34,14 @@ config.mongoURI = {
 mongoose.Promise = require('bluebird');
 
 //Connecting to mongo using mongoose framework
-mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
+/*mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
   if(err) {
     console.log('Error connecting to the database. ' + err);
   } else {
     //console.log('Connected to Database: ' + config.mongoURI[app.settings.env]);
   }
 });
-
+*/
 
 //Defining base API paths
 app.use('/ratings', ratingApi);
