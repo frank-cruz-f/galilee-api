@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var categoryController = require('../controllers/categoryController');
-var common = require('../common');
 
 //Routes for /categories, calls the proper controller depending on the path
 

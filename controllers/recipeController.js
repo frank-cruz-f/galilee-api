@@ -1,5 +1,4 @@
 var Recipe = require('../models/recipe');
-var common = require('../common');
 
 //Controller for Recipe entity
 var recipeController = {

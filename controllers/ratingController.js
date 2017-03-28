@@ -1,5 +1,4 @@
 var Rating = require('../models/rating');
-var common = require('../common');
 
 //Controller for Rating entity
 var ratingController = {
