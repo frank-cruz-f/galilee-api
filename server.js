@@ -3,7 +3,6 @@
 
 var mongoose = require('mongoose');
 var express = require('express');
-var categoryApi = require('./routes/category');
 var billApi = require('./routes/bill');
 var app = express();
 
@@ -43,7 +42,6 @@ mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
 });
 
 //Defining base API paths
-app.use('/categories', categoryApi);
 app.use('/bills', billApi);
 
 //Starting the app.
