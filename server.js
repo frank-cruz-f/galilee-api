@@ -3,9 +3,7 @@
 
 var mongoose = require('mongoose');
 var express = require('express');
-var ratingApi = require('./routes/rating');
 var categoryApi = require('./routes/category');
-var recipeApi = require('./routes/recipe');
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -44,9 +42,7 @@ mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
 });
 
 //Defining base API paths
-app.use('/ratings', ratingApi);
 app.use('/categories', categoryApi);
-app.use('/recipes', recipeApi);
 
 //Starting the app.
 app.set('port', process.env.PORT || 9080);
