@@ -1,4 +1,5 @@
 var Category = require('../models/category');
+var common = require('../common');
 
 //Controller for Category entity
 var categoryController = {
