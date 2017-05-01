@@ -9,6 +9,7 @@ const common = {
 		CATEGORY_ID_MISSING: "CategoryId is missing",
 		POST_ERROR: "Error in post",
 		GET_ERROR: "Error in get",
+		DELETE_ERROR: "Error in delete",
 		SUCCESS: "Success"
 	}
 }

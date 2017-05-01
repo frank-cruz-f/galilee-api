@@ -33,4 +33,16 @@ router.post('/createBill', function(req, res) {
 	}
 });
 
+// /bills/deleteBill creates a new bill
+router.delete('/deleteBill/:billId', function(req, res) {
+	billController.deleteBill(req.params.billId, function(error){
+		if(error){
+			res.json({code: common.codes.ERROR, data: common.messages.DELETE_ERROR + ": " + error});
+		}
+		else{
+			res.json({code: common.codes.SUCCESS, data: common.messages.SUCCESS});
+		}
+	});
+});
+
 module.exports = router;

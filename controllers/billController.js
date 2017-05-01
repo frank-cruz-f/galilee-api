@@ -37,6 +37,21 @@ var billController = {
 		 	}
 
     	});
+	},
+	deleteBill: function(billId, callback){
+		 Bill.findByIdAndRemove(billId, function(error, bills) {
+		 	//If there's an error, raises it to the caller of this function.
+		 	if(error){
+		 		log.info(common.messages.GET_ERROR + ": " +error);
+		 		callback(error);
+		 	}
+		 	else{
+		 		if(callback){
+		 			callback();
+		 		}
+		 	}
+
+    	});
 	}
 }
 
