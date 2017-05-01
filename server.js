@@ -44,7 +44,7 @@ mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
 
 //Defining base API paths
 app.use('/categories', categoryApi);
-app.use('/bill', billApi);
+app.use('/bills', billApi);
 
 //Starting the app.
 app.set('port', process.env.PORT || 9080);
