@@ -51,7 +51,7 @@ app.use('/recipes', recipeApi);
 //Starting the app.
 app.set('port', process.env.PORT || 9080);
 app.listen(app.get('port'), function () {
-  //console.log("server started");
+  console.log("server started");
 });
 
 module.exports = app;
