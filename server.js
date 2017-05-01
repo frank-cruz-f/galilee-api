@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 //Config for selecting proper database depending of environment, development by default.
 var config = {};
 config.mongoURI = {
-	development: 'mongodb://localhost/cookbook',
+	development: 'mongodb://frank18cr:79527952a@ds143900.mlab.com:43900/heroku_vpr3tdc1',
 	test: 'mongodb://localhost/cookbook-testing'
 }
 
@@ -34,14 +34,13 @@ config.mongoURI = {
 mongoose.Promise = require('bluebird');
 
 //Connecting to mongo using mongoose framework
-/*mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
+mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
   if(err) {
     console.log('Error connecting to the database. ' + err);
   } else {
-    //console.log('Connected to Database: ' + config.mongoURI[app.settings.env]);
+    console.log('Connected to Database: ' + config.mongoURI[app.settings.env]);
   }
 });
-*/
 
 //Defining base API paths
 app.use('/ratings', ratingApi);
