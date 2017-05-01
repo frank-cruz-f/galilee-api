@@ -10,8 +10,8 @@ var app = express();
 
 var bodyParser = require('body-parser');
 
-/*var bunyan = require('bunyan');
-log = bunyan.createLogger({name: 'cookbook', streams:[{level:'info', path: './logs/errors.log'}]});*/
+var bunyan = require('bunyan');
+log = bunyan.createLogger({name: 'cookbook', streams:[{level:'info', path: './logs/errors.log'}]});
 
 // parse application/json
 app.use(bodyParser.json())
