@@ -27,6 +27,7 @@ app.use(function(req, res, next) {
 var config = {};
 config.mongoURI = {
 	development: 'mongodb://frank18cr:79527952a@ds143900.mlab.com:43900/heroku_vpr3tdc1',
+  production: 'mongodb://frank18cr:79527952a@ds143900.mlab.com:43900/heroku_vpr3tdc1',
 	test: 'mongodb://localhost/cookbook-testing'
 }
 
