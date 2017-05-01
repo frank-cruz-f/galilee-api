@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var express = require('express');
 var categoryApi = require('./routes/category');
 var app = express();
+var common = require('common');
 
 var bodyParser = require('body-parser');
 
