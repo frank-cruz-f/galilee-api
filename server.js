@@ -4,6 +4,7 @@
 var mongoose = require('mongoose');
 var express = require('express');
 var billApi = require('./routes/bill');
+var equipmentApi = require('./routes/equipment');
 var app = express();
 
 var bodyParser = require('body-parser');
@@ -44,9 +45,10 @@ mongoose.connect(config.mongoURI[app.settings.env], function(err, res) {
 
 //Defining base API paths
 app.use('/bills', billApi);
+app.use('/equipment', equipmentApi);
 
 //Starting the app.
-app.set('port', process.env.PORT || 9080);
+app.set('port', process.env.PORT || 9081);
 app.listen(app.get('port'), function () {
   console.log("server started on: " + app.get('port'));
 });
