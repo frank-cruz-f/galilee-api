@@ -3,17 +3,22 @@ var Schema = mongoose.Schema;
 
 //Bill entity
 var equipmentSchema = new Schema({
-  brand: String,
-  model: String,
-  voltage: Number,
+  equipment:[
+      {
+          brand:String,
+          model:String,
+          capacity:Number,
+          picturesLinks:[String]
+      }
+  ],
+  voltage:Number,
   monophase: Boolean,
   mainSwitchCapacity: Number,
-  capacity: Number,
+  mainSwitchImages: [String],
   electricDesignPlan: Boolean,
   mainEquipmentManuals: Boolean,
   equipmentOperationInfo: Boolean,
-  equipmentMaintenanceProgram: Boolean,
-  picturesLinks: [String]
+  equipmentMaintenanceProgram: Boolean
 });
 
 var Equipment = mongoose.model('Equipment', equipmentSchema);

@@ -6,17 +6,16 @@ var equipmentController = {
 	//Creates a new equipment on the db
 	createEquipment: function(equipmentObj, callback){
 		new Equipment({
-				brand: equipmentObj.brand,
-				model: equipmentObj.model,
+				equipment: equipmentObj.equipment,
 				voltage: equipmentObj.voltage,
 				monophase: equipmentObj.monophase,
 				mainSwitchCapacity: equipmentObj.mainSwitchCapacity,
+				mainSwitchImages: equipmentObj.mainSwitchImages,
 				capacity: equipmentObj.capacity,
 				electricDesignPlan: equipmentObj.electricDesignPlan,
 				mainEquipmentManuals: equipmentObj.mainEquipmentManuals,
 				equipmentOperationInfo: equipmentObj.equipmentOperationInfo,
 				equipmentMaintenanceProgram: equipmentObj.equipmentMaintenanceProgram,
-				picturesLinks: equipmentObj.picturesLinks
 			}).save(function(error){
 				//If there's an error, raises it to the caller of this function.
 				if(error){
