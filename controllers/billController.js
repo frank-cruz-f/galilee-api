@@ -10,7 +10,11 @@ var billController = {
 				provider: billObj.provider,
 				consumption: billObj.consumption,
 				cost: billObj.cost,
-				comments: billObj.comments
+				comments: billObj.comments,
+				consumptionUnity: billObj.consumptionUnity,
+				consumptionType: billObj.consumptionType,
+				consumptionFee: billObj.consumptionFee,
+				productionUnity: billObj.productionUnity
 			}).save(function(error){
 				//If there's an error, raises it to the caller of this function.
 				if(error){
