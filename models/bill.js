@@ -14,7 +14,7 @@ var billSchema = new Schema({
   productionUnit1: String,
   productionQuantity1: String,
   productionUnit2: String,
-  productionQuantity2: String,
+  productionQuantity2: String
 });
 
 var Bill = mongoose.model('Bill', billSchema);
