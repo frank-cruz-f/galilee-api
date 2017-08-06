@@ -11,7 +11,10 @@ var billSchema = new Schema({
   consumptionUnity: String,
   consumptionType: String,
   consumptionFee: String,
-  productionUnity: String
+  productionUnit1: String,
+  productionQuantity1: String,
+  productionUnit2: String,
+  productionQuantity2: String,
 });
 
 var Bill = mongoose.model('Bill', billSchema);
