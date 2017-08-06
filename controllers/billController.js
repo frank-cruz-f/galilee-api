@@ -14,9 +14,9 @@ var billController = {
 				consumptionUnity: billObj.consumptionUnity,
 				consumptionType: billObj.consumptionType,
 				consumptionFee: billObj.consumptionFee,
-				productionUnit1: billObj.productionUnit1
-				productionQuantity1: billObj.productionQuantity1
-				productionUnit2: billObj.productionUnit2
+				productionUnit1: billObj.productionUnit1,
+				productionQuantity1: billObj.productionQuantity1,
+				productionUnit2: billObj.productionUnit2,
 				productionQuantity2: billObj.productionQuantity2
 			}).save(function(error){
 				//If there's an error, raises it to the caller of this function.
