@@ -10,15 +10,16 @@ var clientController = {
 				productionUnit: clientObj.productionUnit,
 				direction: clientObj.direction,
 				location: clientObj.location
+			}).save(function(error){
+				//If there's an error, raises it to the caller of this function.
+				if(error){
+					log.info(common.messages.POST_ERROR + ": " +error);
+					callback(error);
+				}
+				else{
+					callback();
+				}				
 			});
-			//If there's an error, raises it to the caller of this function.
-			if(error){
-				log.info(common.messages.POST_ERROR + ": " +error);
-				callback(error);
-			}
-			else{
-				callback();
-			}
 	},
 	//Retrieves all the clients stored on the db
 	getClients: function(callback){
