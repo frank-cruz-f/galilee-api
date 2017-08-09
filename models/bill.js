@@ -4,9 +4,9 @@ var Schema = mongoose.Schema;
 //Bill entity
 var billSchema = new Schema({
   period: {type: String, required: true},
-  provider: {type: String, required: true},
-  consumption: {type: String, required: true},
-  cost: {type: String, required: true},
+  provider: String,
+  consumption: String,
+  cost: String,
   comments: String,
   consumptionUnity: String,
   consumptionType: String,
