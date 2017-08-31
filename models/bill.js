@@ -8,13 +8,14 @@ var billSchema = new Schema({
   consumption: String,
   cost: String,
   comments: String,
-  consumptionUnity: String,
+  consumptionUnit: String,
   consumptionType: String,
   consumptionFee: String,
   productionUnit1: String,
   productionQuantity1: String,
   productionUnit2: String,
-  productionQuantity2: String
+  productionQuantity2: String,
+  biomassType: String
 });
 
 var Bill = mongoose.model('Bill', billSchema);

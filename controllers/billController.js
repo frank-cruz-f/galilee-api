@@ -17,7 +17,8 @@ var billController = {
 				productionUnit1: billObj.productionUnit1,
 				productionQuantity1: billObj.productionQuantity1,
 				productionUnit2: billObj.productionUnit2,
-				productionQuantity2: billObj.productionQuantity2
+				productionQuantity2: billObj.productionQuantity2,
+				biomassType: billObj.biomassType
 			}).save(function(error){
 				//If there's an error, raises it to the caller of this function.
 				if(error){
