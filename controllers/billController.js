@@ -11,7 +11,7 @@ var billController = {
 				consumption: billObj.consumption,
 				cost: billObj.cost,
 				comments: billObj.comments,
-				consumptionUnity: billObj.consumptionUnity,
+				consumptionUnit: billObj.consumptionUnit,
 				consumptionType: billObj.consumptionType,
 				consumptionFee: billObj.consumptionFee,
 				productionUnit1: billObj.productionUnit1,
